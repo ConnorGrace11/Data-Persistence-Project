@@ -50,6 +50,12 @@ public class MenuUIHandler : MonoBehaviour
 #endif
     }
 
+    public void ResetScore()
+    {
+        MenuManager.Instance.ResetHighScore();
+
+    }
+
     public void SubmitName(string arg0)
     {
         MenuManager.Instance.user = arg0;

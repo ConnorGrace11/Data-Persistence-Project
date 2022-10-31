@@ -60,4 +60,15 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void ResetHighScore()
+    {
+        HighScoreData data = new HighScoreData();
+        data.user = "";
+        data.score = 0;
+
+        string json = JsonUtility.ToJson(data);
+
+        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+    }
+
 }
